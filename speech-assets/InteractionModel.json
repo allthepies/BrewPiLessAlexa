@@ -1,0 +1,351 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "GetReport",
+      "samples": [
+        "get status",
+        "get info",
+        "what is the status",
+        "report status",
+        "status report"
+      ],
+      "slots": []
+    },
+    {
+      "name": "GetTemperature",
+      "samples": [
+        "What is the temperature",
+        "for the temperature",
+        "what is the beer temperature",
+        "what is the fridge temperature"
+      ],
+      "slots": []
+    },
+    {
+      "name": "SetTemperature",
+      "samples": [
+        "set temperature to {temp}",
+        "set temperature to {temp} degrees",
+        "set {type} temperature to {temp}",
+        "set {type} temperature to {temp} degrees",
+        "set {type} temperature",
+        "set temperature"
+      ],
+      "slots": [
+        {
+          "name": "temp",
+          "type": "degrees",
+          "samples": [
+            "{temp} degrees",
+            "{temp}"
+          ]
+        },
+        {
+          "name": "type",
+          "type": "setpointType",
+          "samples": [
+            "{type}",
+            "{type} temperature"
+          ]
+        }
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "degrees",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "2",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "3",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "4",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "5",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "6",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "7",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "8",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "9",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "10",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "10.1",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "10.2",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "10.3",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "10.4",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "10.5",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "10.6",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "10.7",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "10.8",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "10.9",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "12",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "13",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "14",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "15",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "16",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "17",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "18",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "19",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "20",
+            "synonyms": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "setpointType",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "beer",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "fridge",
+            "synonyms": []
+          }
+        }
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "id": "Elicit.Intent-SetTemperature.IntentSlot-temp",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "What temperature value do you want?"
+        }
+      ]
+    },
+    {
+      "id": "Confirm.Intent-SetTemperature.IntentSlot-temp",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "{temp} degrees, OK ?"
+        },
+        {
+          "type": "PlainText",
+          "value": "Is {temp} degrees correct ?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-SetTemperature.IntentSlot-type",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Which temperature should I set, beer or fridge ?"
+        }
+      ]
+    }
+  ],
+  "dialog": {
+    "version": "1.0",
+    "intents": [
+      {
+        "name": "SetTemperature",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "temp",
+            "type": "degrees",
+            "elicitationRequired": true,
+            "confirmationRequired": true,
+            "prompts": {
+              "elicit": "Elicit.Intent-SetTemperature.IntentSlot-temp",
+              "confirm": "Confirm.Intent-SetTemperature.IntentSlot-temp"
+            }
+          },
+          {
+            "name": "type",
+            "type": "setpointType",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-SetTemperature.IntentSlot-type"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
